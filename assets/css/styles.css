@@ -5,6 +5,7 @@
   --lightGrayishBlue: hsl(234, 14%, 74%);
   --grayishBlue: hsl(233, 13%, 49%);
   --darkGrayishBlue: hsl(232, 13%, 33%);
+  --priceBg: white;
 }
 
 body {
@@ -78,4 +79,99 @@ body {
 
 .checkbox:checked ~ .switch {
   background: var(--lightGrayishBlue);
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.price {
+  width: 100%;
+  display: flex;
+  border-radius: 7.5px;
+  padding: 5% 7%;
+  padding-bottom: 8%;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--priceBg);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+.price:last-child {
+  margin-bottom: 0;
+}
+
+.price--title {
+  color: var(--grayishBlue);
+}
+
+.price--cost {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: var(--darkGrayishBlue);
+}
+
+.price--cost--important-text {
+  font-size: 2.5em;
+  margin-left: 15px;
+}
+
+.price__features {
+  list-style: none;
+  width: 100%;
+  padding: 0px;
+}
+
+.price__features--feature {
+  border-top: 1px solid var(--lightGrayishBlue);
+  text-align: center;
+  color: var(--grayishBlue);
+  padding: 15px;
+}
+
+.price__features--feature:last-child {
+  border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+.price--btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient1),
+    var(--gradient2)
+  );
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.price-highlight {
+  background: linear-gradient(to bottom, var(--gradient1), var(--gradient2));
+}
+
+.price-highlight .price--title {
+  color: white;
+}
+.price-highlight .price--cost {
+  color: white;
+}
+
+.price-highlight .price__features--feature {
+  color: white;
+}
+
+.price-highlight .price--btn {
+  background: white;
+  color: var(--gradient2);
 }
