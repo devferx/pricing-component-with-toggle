@@ -11,7 +11,71 @@ body {
   background: url(../images/bg-top.svg), var(--veryLightGrayishBlue);
   background-size: contain, auto;
   background-repeat: no-repeat;
-  background-position: top right -330%, center;
+  background-position: top right, center;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+}
+
+.container {
+  margin: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header--title {
+  color: var(--grayishBlue);
+}
+
+.header__switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.header__switch-container--type-princing {
+  color: var(--lightGrayishBlue);
+}
+
+.checkbox {
+  display: none;
+}
+
+.switch {
+  display: block;
+  width: 75px;
+  height: 30px;
+  border-radius: 500px;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient1),
+    var(--gradient2)
+  );
+  margin: 0 10px;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px;
+  transition: 0.5s ease;
+}
+
+.switch::before {
+  content: "";
+  display: block;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  user-select: none;
+  transition: 0.3s;
+  will-change: transform;
+}
+
+.checkbox:checked ~ .switch::before {
+  transform: translateX(150%);
+}
+
+.checkbox:checked ~ .switch {
+  background: var(--lightGrayishBlue);
 }
