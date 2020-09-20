@@ -1,6 +1,17 @@
 :root {
+  --gradient1: hsl(236, 72%, 79%);
+  --gradient2: hsl(237, 63%, 64%);
   --veryLightGrayishBlue: hsl(240, 78%, 98%);
   --lightGrayishBlue: hsl(234, 14%, 74%);
   --grayishBlue: hsl(233, 13%, 49%);
   --darkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+body {
+  background: url(../images/bg-top.svg), var(--veryLightGrayishBlue);
+  background-size: contain, auto;
+  background-repeat: no-repeat;
+  background-position: top right -330%, center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
 }
