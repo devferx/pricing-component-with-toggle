@@ -154,6 +154,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: 450ms ease;
 }
 
 .price-highlight {
@@ -174,4 +175,49 @@ body {
 .price-highlight .price--btn {
   background: white;
   color: var(--gradient2);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url(../images/bg-top.svg), url(../images/bg-bottom.svg),
+      var(--veryLightGrayishBlue);
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+  }
+
+  .header {
+    margin-top: 50px;
+  }
+
+  .prices {
+    flex-direction: row;
+    padding: 0 3%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    margin-top: 80px;
+  }
+
+  .price {
+    width: 25%;
+    padding: 40px 30px;
+    margin-bottom: 0;
+  }
+
+  .price:nth-child(2) {
+    transform: scale(1.1);
+  }
+
+  .price--btn:hover {
+    border: 1px solid var(--gradient2);
+    background: rgba(0, 0, 0, 0);
+    color: var(--gradient2);
+  }
+
+  .price-highlight .price--btn:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    color: white;
+  }
 }
