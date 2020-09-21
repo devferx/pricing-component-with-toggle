@@ -15,10 +15,21 @@ body {
   background-position: top right, center;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
+  transition: 250ms ease;
 }
 
 .container {
   margin: 20px;
+}
+
+.nav {
+  padding: 15px;
+}
+
+.icon {
+  color: var(--darkGrayishBlue);
+  cursor: pointer;
+  user-select: none;
 }
 
 .header {
@@ -220,4 +231,12 @@ body {
     border: 1px solid white;
     color: white;
   }
+}
+
+/* Dark Mode */
+.dark-mode {
+  --veryLightGrayishBlue: #333333;
+  --grayishBlue: white;
+  --darkGrayishBlue: white;
+  --priceBg: #242424;
 }
