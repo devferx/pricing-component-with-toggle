@@ -166,6 +166,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: 450ms ease;
+  will-change: background, color, border;
 }
 
 .price-highlight {
@@ -211,7 +212,7 @@ body {
   }
 
   .price {
-    width: 25%;
+    width: 30%;
     padding: 40px 30px;
     margin-bottom: 0;
   }
@@ -230,6 +231,12 @@ body {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid white;
     color: white;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1160px) {
+  .price {
+    font-size: 11px;
   }
 }
 
